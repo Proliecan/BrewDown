@@ -26,7 +26,7 @@ let makeJson = async () => {
 
 	// create json
 	const text = editor.document.getText();
-	const json = text;
+	const json = parseToJson(text);
 
 	// is a file at savePath?
 	let uriScheme = '';
@@ -66,6 +66,10 @@ let makeJson = async () => {
 	).then(() => {
 		outputChannel.appendLine('	🍻 open and filled!');
 	});
+};
+
+let parseToJson = (text) => {
+	return 'No Parse yet.';
 };
 
 /**
