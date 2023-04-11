@@ -30,7 +30,7 @@ let makeJson = async () => {
 
 	// is a file at savePath?
 	let uriScheme = '';
-	await vscode.workspace.fs.stat(vscode.Uri.parse(savePath)).then(async () => {
+	await vscode.workspace.fs.stat(vscode.Uri.parse('file:' + savePath)).then(async () => {
 		// yes
 		// overwrite?
 		await vscode.window.showWarningMessage('File already exists. Overwrite?', 'Yes', 'No').then((value) => {
